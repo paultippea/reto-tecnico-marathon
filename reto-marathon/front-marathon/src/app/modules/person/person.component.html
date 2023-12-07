@@ -1,0 +1,19 @@
+<mat-toolbar class="d-flex justify-content-between">
+    <span>Marathon App</span>
+    <div>
+        <button mat-button class="me-3" routerLink="/person/list">
+            Persona Jurídica
+        </button>
+        <button mat-button routerLink="/person/user">
+            Usuarios
+        </button>
+        <button class="ms-5" mat-button (click)="signOut()">
+            Cerrar sesión
+            <mat-icon>logout</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>
+
+<div class="p-3">
+    <router-outlet />
+</div>

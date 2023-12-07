@@ -1,0 +1,25 @@
+<div class="p-3" [formGroup]="registerFrom">
+    <h2>Búsqueda de usuario</h2>
+
+    <mat-form-field class="d-block mb-2" appearance="outline">
+        <mat-label>Tipo de documento</mat-label>
+        <mat-select formControlName="tipo">
+            <mat-option value="2">Ruc</mat-option>
+            <mat-option value="1">Dni</mat-option>
+        </mat-select>
+        <mat-error>Este campo es inválido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="d-block mb-2" appearance="outline">
+        <mat-label>Numero documento</mat-label>
+        <input matInput type="text" formControlName="ruc">
+        @if (registerFrom.get('ruc')?.value) {
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="registerFrom.get('ruc')?.setValue('')">
+            <mat-icon>close</mat-icon>
+        </button>
+        }
+        <mat-error>Este campo es inválido</mat-error>
+    </mat-form-field>
+
+    <button (click)="register()" [disabled]="registerFrom.invalid" mat-raised-button color="primary">Buscar</button>
+</div>

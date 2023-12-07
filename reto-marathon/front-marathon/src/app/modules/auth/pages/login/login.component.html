@@ -1,0 +1,24 @@
+<div class="d-flex justify-content-center align-items-center h-100">
+  <mat-card class="custom-card">
+    <mat-card-content>
+      <form [formGroup]="loginForm" (submit)="signin()">
+        <h2 class="text-center mb-1">Marathon Login</h2>
+        <h4 class="text-muted">Ingresa tus credenciales:</h4>
+        <mat-form-field class="d-block mb-2" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input email matInput formControlName="email">
+          <mat-error>Este campo es inválido</mat-error>
+        </mat-form-field>
+        <mat-form-field class="d-block mb-2" appearance="outline">
+          <mat-label>Contraseña</mat-label>
+          <input matInput type="password" formControlName="password">
+          <mat-error>Este campo es inválido</mat-error>
+        </mat-form-field>
+        <button type="submit" [disabled]="loginForm.invalid" mat-raised-button color="primary">
+          Ingresar
+          <mat-icon fontIcon="login"></mat-icon>
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

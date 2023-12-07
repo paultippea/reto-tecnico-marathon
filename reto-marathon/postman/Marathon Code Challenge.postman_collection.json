@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "d0629edc-5aad-4c38-80da-eed956b12ac2",
+		"name": "Marathon Code Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24730757"
+	},
+	"item": [
+		{
+			"name": "Save User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"ptippeacevedo\",\r\n    \"name\": \"paul\",\r\n    \"lastname\": \"tippe acevedo\",\r\n    \"email\": \"paul1@gmail.com\",\r\n    \"password\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Person",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTcwZjA5ZjRhNWE0M2M0MTUzN2QyMTQiLCJ1c2VybmFtZSI6InB0aXBwZWFjZXZlZG8iLCJlbWFpbCI6InBhdWwxQGdtYWlsLmNvbSIsImlhdCI6MTcwMTkxNDM1NywiZXhwIjoxNzAxOTE3OTU3fQ.gvtBp3P0rAwQB87fOA2hOBo3fyZLRH7n9R7gJe28678",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipo\": \"2\",\r\n    \"ruc\": \"20600892470\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/person/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"person",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth Signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"paul1@gmail.com\",\r\n    \"password\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/auth/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTcwYzRmM2YxMDUzZjJlYjM0NmRhMzgiLCJ1c2VybmFtZSI6InB0aXBwZWFjZXZlZG8iLCJlbWFpbCI6InBhdWwxQGdtYWlsLmNvbSIsImlhdCI6MTcwMTg4OTI4NiwiZXhwIjoxNzAxODg5NDA2fQ.sQMOABtzIS-J3rczzitgrf0eg6PGE8KrRNr6pqQp5-Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Person",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTcxMjdiMmEzZDkyZjBhMjE4ZWE2NTIiLCJ1c2VybmFtZSI6InB0aXBwZWFjZXZlZG8iLCJlbWFpbCI6InBhdWwxQGdtYWlsLmNvbSIsImlhdCI6MTcwMTkxNDU3NiwiZXhwIjoxNzAxOTE4MTc2fQ.tNPb0ZawYwYNrTZ-bfchXJ3CymH3LhQzDYRWvvec_5k",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/person",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find By User Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NTcwMTUzNzkxNzA4YmZjMDk1MTBjZDIiLCJ1c2VybmFtZSI6Im1hbHphbW9yYTUiLCJlbWFpbCI6Im1hbHphbW9yYTFAYXNkLmNvbSIsImlhdCI6MTcwMTg0NzExNywiZXhwIjoxNzAxODQ3MjM3fQ.dzVc8VFpZFtW_Bk3iANb3NpVtNh5lHY73-kqn2zf4Dw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/user/657004abb1111d2a1a156600",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"657004abb1111d2a1a156600"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
